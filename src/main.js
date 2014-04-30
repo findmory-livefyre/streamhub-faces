@@ -2,6 +2,7 @@ var $ = require('streamhub-sdk/jquery');
 var ContentListView = require('streamhub-sdk/content/views/content-list-view');
 var FaceContentView = require('streamhub-faces/face-content-view');
 var inherits = require('inherits');
+require('css!streamhub-faces/style.css');
 
 'use strict';
 

@@ -14,7 +14,8 @@ require.config({
   },
   map: {
     '*': {
-      debug : 'streamhub-sdk/debug'
+      debug : 'streamhub-sdk/debug',
+      css: 'lib/require-css/css'
     }
   },
   packages: [{
