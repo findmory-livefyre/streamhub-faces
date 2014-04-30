@@ -1,0 +1,18 @@
+{
+  "name": "streamhub-wall",
+  "description": "Livefyre Faces",
+  "author": "Livefyre <support@livefyre.com>",
+  "version": "0.0.0",
+  "devDependencies": {
+    "bower": "~1.0.0",
+    "http-server": "*",
+    "less": "~1.3.3",
+    "jshint": "~1.1.0",
+    "phantomjs": "~1.9.2-2"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "./node_modules/http-server/bin/http-server . -c-1",
+    "hint": "./node_modules/jshint/bin/jshint src/*.js; echo"
+  }
+}

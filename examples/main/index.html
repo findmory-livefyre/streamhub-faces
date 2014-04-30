@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../lib/streamhub-sdk/src/css/style.css">
+    <!--<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>-->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <style> body { margin: 0; padding: 0; background-color: #EFEFEF; width: 50%;}
+    .hub-content-container {float:left;}
+    </style>
+</head>
+    <body>
+        
+        <div id="view"></div>
+
+        <script src="../../lib/cajon/cajon.js" type="text/javascript"></script>
+        <script src="/requirejs.conf.js" type="text/javascript"></script>
+        <script>
+            requirejs.config({
+                baseUrl: "../../"
+            });
+        </script>
+        <script>
+        require([
+            'streamhub-sdk/collection',
+            'streamhub-faces'
+        ],function (Collection, FacesView) {
+            var opts = {
+                "network": "labs-t402.fyre.co",
+                "siteId": "303827",
+                // Fast Collection
+                // "articleId": "labs_demo_fire",
+                "articleId": "xbox-0",
+                "environment": "t402.livefyre.com"
+            };
+
+            var facesView = window.facesView = new FacesView({
+                el: document.getElementById("view"),
+                initial: 50,
+                showMore: 50
+                //,modal: false
+            });
+
+            var collection = new Collection(opts);
+           collection.pipe(facesView);
+            
+        });
+        </script>
+    </body>
+</html>

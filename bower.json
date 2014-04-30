@@ -1,0 +1,17 @@
+{
+  "name": "streamhub-faces",
+  "version": "0.0.0",
+  "main": [
+    "./src/main.js"
+  ],
+  "dependencies": {
+    "streamhub-sdk": "git://github.com/Livefyre/streamhub-sdk.git#~v2.8",
+    "cajon": "git://github.com/requirejs/cajon.git#~0.1.11"
+  },
+  "devDependencies": {
+    "almond": "~0.2.9"
+  },
+  "resolutions": {
+    "view": "~1.1"
+  }
+}
